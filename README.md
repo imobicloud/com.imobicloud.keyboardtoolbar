@@ -19,7 +19,7 @@ Styles
 
 Controller
 
-	$.toolbar.init();   // call this function on first load
+	$.toolbar.init( window_view );   // call this function on first load
 	$.toolbar.unload(); // call this function when window blurred
 	$.toolbar.reload(); // call this function when window focussed
 
