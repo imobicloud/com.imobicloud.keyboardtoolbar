@@ -1,5 +1,10 @@
+var keyboardHeight = 0;
+
 init(arguments[0] || {});
 function init(args) {
+	var exclude = ['id', 'children'];
+	$.container.applyProperties(_.omit(args, exclude));
+	
 	if (args.children) {
 		_.each(args.children, function(child) {
 			$.container.add(child);
@@ -26,12 +31,16 @@ exports.unload = function() {
 
 function updateUI(e) {
 	if (Ti.App.keyboardVisible) {
-		var keyboardHeight = e.keyboardFrame.height;
+		keyboardHeight = e.keyboardFrame.height;
   		$.container.bottom = keyboardHeight;
   		$.trigger('toggle', { visible: true, height: keyboardHeight });
 	} else {
+		keyboardHeight = 0;
 		$.container.bottom = 0;
 		$.trigger('toggle', { visible: false, height: 0 });
 	}
 }
 
+exports.getHeight = function() {
+	return keyboardHeight;
+};
