@@ -19,7 +19,9 @@ exports.init = function(win) {
 	if (OS_IOS) {
 		Ti.App.addEventListener('keyboardframechanged', updateUI);
 	} else {
-		win.windowSoftInputMode = Titanium.UI.Android.SOFT_INPUT_STATE_ALWAYS_VISIBLE | Titanium.UI.Android.SOFT_INPUT_ADJUST_PAN;
+		if (win.windowSoftInputMode == null) {
+			win.windowSoftInputMode = Ti.UI.Android.SOFT_INPUT_ADJUST_PAN | Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN;
+		}
 	}
 };
 
