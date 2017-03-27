@@ -20,8 +20,9 @@ Styles
 Controller
 
 	$.toolbar.init( window_view );   // call this function on first load
+	
 	$.toolbar.unload(); // call this function when window blurred
-	$.toolbar.reload(); // call this function when window focussed
+	$.toolbar.init( window_view ); // call this function when window focussed
 
 	function toolbarToggle(e) {
   		$.lv.bottom = e.height + 56;
@@ -32,4 +33,3 @@ Controller
 	}
 
 Changes log:
-
