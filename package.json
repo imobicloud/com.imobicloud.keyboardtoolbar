@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "appc-npm": {
+    "config": {
+      "com.imobicloud.keyboardtoolbar": "1.0.0"
+    },
+    "target": {
+      "alloy": "app/widgets/com.imobicloud.keyboardtoolbar"
+    },
+    "ignore": [
+      "package.json"
+    ]
+  },
+  "description": "Titanium UI - Keyboard toolbar",
+  "author": "imobicloud",
+  "license": "Public Domain",
+  "name": "com.imobicloud.keyboardtoolbar",
+  "scripts": {
+    "postinstall": "node ./appc-npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/imobicloud/com.imobicloud.keyboardtoolbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imobicloud/com.imobicloud.keyboardtoolbar/issues"
+  },
+  "homepage": "https://github.com/imobicloud/com.imobicloud.keyboardtoolbar#titanium-ui---keyboard-toolbar",
+  "keywords": [
+    "alloy",
+    "alloy-widget",
+    "appc-npm",
+    "appcelerator"
+  ]
+}
